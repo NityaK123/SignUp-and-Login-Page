@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #di{
+            width:400px;
+            height:300px;
+            border:1px solid red;
+            margin:5px 500px;
+            padding:5px;
+            background-color:blueviolet;
+        }
+        input{
+            padding:5px;
+            display: inline;
+            margin:auto;
+            margin-top:5px;
+            margin-left:100px;
+            background-color:white;
+
+        }
+        span{
+            display: inline;
+            margin-left:140px;
+            color:black;
+        }
+        button{
+            margin:10px 150px;
+        }
+    </style>
+</head>
+<body>
+        {% include 'Head.html' %}
+    <div id="di">
+        <form action="{% url 'Authe' %}">
+            <span>Enter Email :</span>
+            <br>
+            <input type="email" name="email" />
+            <br>
+            <span>Enter Password :</span>
+            <br>
+            <input type="password" name="password" />
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
